@@ -1,0 +1,26 @@
+{
+  "name": "kizuna",
+  "version": "1.0.0",
+  "description": "a photo sharing web app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tackyunicorn/kizuna.git"
+  },
+  "author": "Joshua Joseph",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tackyunicorn/kizuna/issues"
+  },
+  "homepage": "https://github.com/tackyunicorn/kizuna#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
