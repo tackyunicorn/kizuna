@@ -1,0 +1,28 @@
+<div id="new-post" class="sidenav new-post">
+    <form class="container section" id="post" enctype="multipart/form-data">
+        <h6>new post</h6>
+        <div class="divider"></div>
+        <div class="file-field input-field">
+            <div class="btn add-btn">
+                <i class="large material-icons">collections</i>
+                <input type="file" id="fileSelected" accept="image/*" required>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+            </div>
+        </div>
+        <div class="input-field">
+            <input placeholder="e.g. my awesome pic!" id="caption" type="text" required>
+            <label for="caption">caption</label>
+        </div>
+        <p>
+            <label>
+                <input id="private" type="checkbox">
+                <span>Private</span>
+            </label>
+        </p>
+        <button class="btn right" type="submit">post
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+</div>
