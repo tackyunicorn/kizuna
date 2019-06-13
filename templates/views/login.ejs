@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<% include ../partials/head %>
+
+<body>
+    <% include ../partials/header %>
+
+    <div class="container valign-wrapper login">
+        <div class="row">
+            <div class="row center-align valign-wrapper">
+                <div class="col s4"></div>
+                <div class="col s4">
+                    <a class="btn-floating btn-large google" href="/auth/google">
+                        <i class="fab fa-google left"></i>
+                    </a>
+                </div>
+                <div class="col s4"></div>
+            </div>
+
+            <div class="row center-align valign-wrapper">
+                <div class="col s4">
+                    <a class="btn-floating btn-large facebook" href="/auth/facebook">
+                        <i class="fab fa-facebook left"></i>
+                    </a>
+                </div>
+                <div class="col s4">
+                    <img class="loading" src="/img/android-chrome-512x512.png" alt="kizuna" width="200px">
+                </div>
+                <div class="col s4">
+                    <a class="btn-floating btn-large twitter" href="/auth/twitter">
+                        <i class="fab fa-twitter left"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row center-align valign-wrapper">
+                <div class="col s4"></div>
+                <div class="col s4">
+                    <a class="btn-floating btn-large instagram" href="/auth/instagram">
+                        <i class="fab fa-instagram left"></i>
+                    </a>
+                </div>
+                <div class="col s4"></div>
+            </div>
+        </div>
+    </div>
+
+    <% include ../partials/footer %>
+</body>
+
+</html>
