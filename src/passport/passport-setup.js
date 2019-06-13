@@ -2,6 +2,7 @@ const passport = require('passport')
 require('./google-strategy')
 require('./facebook-strategy')
 require('./twitter-strategy')
+require('./instagram-strategy')
 
 const User = require('../models/user')
 
