@@ -1,2 +1,5 @@
-# Ignore dependency directory
+# ignore dependency directory
 node_modules/
+
+# ignore private key file
+.env
