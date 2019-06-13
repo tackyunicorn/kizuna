@@ -5,7 +5,39 @@
     --complementary: #DD1C1A;
 }
 
+/* logo rotate animation */
+.loading {
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
 /* layout styles */
+html,
+body,
+.login {
+    height: 95%;
+}
+
 img {
     max-width: 100%;
 }
@@ -47,6 +79,15 @@ nav .sidenav-trigger {
     display: inline;
     font-size: 12px;
     padding: 10px;
+}
+
+#menu .row {
+    margin-top: 10px;
+}
+
+#menu div .btn {
+    background: var(--complementary);
+    box-shadow: 1px 1px 3px rgba(90, 90, 90, 0.2);
 }
 
 /* terms and privacy policy styles */
@@ -101,4 +142,21 @@ form .input-field {
 .new-post button {
     background: var(--complementary);
     box-shadow: 1px 1px 3px rgba(90, 90, 90, 0.2);
+}
+
+/* social login styles */
+.google {
+    background: #DB3236;
+}
+
+.twitter {
+    background: #1DA1F2;
+}
+
+.facebook {
+    background: #3B5998;
+}
+
+.instagram {
+    background: #3F729B;
 }
