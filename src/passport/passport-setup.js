@@ -1,5 +1,6 @@
 const passport = require('passport')
 require('./google-strategy')
+require('./facebook-strategy')
 
 const User = require('../models/user')
 
