@@ -29,4 +29,12 @@ router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
     res.redirect('/profile/feed')
 })
 
+// auth with facebook
+router.get('/facebook', passport.authenticate('facebook'))
+
+// callback route for facebook to redirect to
+router.get('/facebook/redirect', passport.authenticate('facebook'), (req, res) => {
+    res.redirect('/profile/feed')
+})
+
 module.exports = router
