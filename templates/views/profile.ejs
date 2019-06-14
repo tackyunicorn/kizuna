@@ -5,12 +5,19 @@
 
 <body>
     <% include ../partials/header %>
+
+    <% if (typeof user != 'undefined') { %>
     <% include ../partials/menu %>
     <% include ../partials/new-post %>
+    <%  } %>
 
     <div class="container">
         <h5>
+            <% if (self == true && typeof user != 'undefined') { %>
             <b><%= user.username %>'s profile</b>
+            <%  } else { %>
+            <b><%= foundUser.username %>'s profile</b>
+            <%  } %>
         </h5>
     </div>
 
