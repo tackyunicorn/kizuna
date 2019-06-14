@@ -7,6 +7,8 @@ const cookieSession = require('cookie-session')
 
 const authRoutes = require('./routes/auth')
 const profileRoutes = require('./routes/profile')
+const searchRoutes = require('./routes/search')
+const userRoutes = require('./routes/user')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -31,9 +33,14 @@ app.use(cookieSession({
 app.use(passport.initialize())
 app.use(passport.session())
 
+// use json parser
+app.use(express.json())
+
 // set up routes
 app.use('/auth', authRoutes)
 app.use('/profile', profileRoutes)
+app.use('/search', searchRoutes)
+app.use('/user', userRoutes)
 
 // create home route
 app.get('/', (req, res) => {
