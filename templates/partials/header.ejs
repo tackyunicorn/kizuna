@@ -1,7 +1,7 @@
 <div class="navbar-fixed">
     <nav class="z-depth-0">
         <div class="nav-wrapper container">
-            <% if (user) { %>
+            <% if (typeof user != 'undefined') { %>
             <a href="/"><span>kizuna</span></a>
             <span class="right white-text">
                 <i class="material-icons sidenav-trigger" data-target="menu">menu</i>
@@ -13,7 +13,7 @@
     </nav>
 </div>
 
-<% if (user) { %>
+<% if (typeof user != 'undefined') { %>
 <div class="fixed-action-btn">
     <a class="btn-floating btn-large add-btn sidenav-trigger loading" data-target="new-post">
         <img src="/img/android-chrome-192x192.png" alt="kizuna">
