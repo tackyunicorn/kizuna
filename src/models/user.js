@@ -10,6 +10,10 @@ const userSchema = new Schema({
     thumbnail: String
 })
 
+userSchema.index({
+    username: 'text'
+})
+
 const User = mongoose.model('user', userSchema)
 
 module.exports = User
