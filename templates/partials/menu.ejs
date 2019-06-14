@@ -4,23 +4,27 @@
             <img src="<%= user.thumbnail %>" alt="thumbnail" class="circle responsive-img">
         </div>
         <div class="col s7">
-            <a class="grey-text" href="/profile/"><%= user.username %></a>
+            <a class="add-btn btn-small" href="/profile/">my profile</a>
         </div>
         <div class="col s2">
-            <a class="btn right" href="/auth/logout">Logout</a>
+            <a class="btn right btn-small" href="/auth/logout">Logout</a>
         </div>
     </div>
     <li>
         <div class="divider"></div>
     </li>
     <div class="nav-wrapper">
-        <form>
+        <form id="search">
             <div class="input-field">
-                <input id="search" placeholder="search for a friend" type="search" required>
+                <input id="searchTerm" placeholder="search for a friend" type="search" required>
                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                 <i class="material-icons">close</i>
             </div>
         </form>
+        <div id="progress" class="#">
+            <div class="indeterminate"></div>
+        </div>
+        <div id="results"></div>
     </div>
     <ul>
         <li><a href="/terms-conditions" class="grey-text sidenav-close">Terms And Conditions</a></li>
