@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // user menu
     const menu = document.querySelectorAll('.menu');
     M.Sidenav.init(menu, {
-        edge: 'right'
+        edge: 'right',
+        onOpenStart: search()
     });
     // new post
     const post = document.querySelectorAll('.new-post');
