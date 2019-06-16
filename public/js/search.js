@@ -1,7 +1,7 @@
 function search() {
-    var el = document.getElementById('search');
-    if (el) {
-        el.addEventListener('submit', function (event) {
+    var element = document.getElementById('search');
+    if (element) {
+        element.addEventListener('submit', function (event) {
             event.preventDefault();
             $("#progress").attr('class', 'progress');
             $("#results").empty();
@@ -26,13 +26,18 @@ function search() {
                             $("#results").append(
                                 "<div class=\"container row valign-wrapper\">" +
                                 "<div class=\"col s3\">" +
-                                "<img src=\"" + item.thumbnail + "\" alt=\"thumbnail\" class=\"circle responsive-img\">" +
+                                "<img data-src=\"" + item.thumbnail + "\" alt=\"thumbnail\" class=\"circle responsive-img lazy\">" +
                                 "</div>" +
                                 "<div class=\"col s9\">" +
                                 "<a class=\"grey-text\" href=\"/user/" + item._id + "\">" + item.username + "</a>" +
                                 "</div>" +
                                 "</div>"
                             );
+                            $("img.lazy").lazy({
+                                effect: "fadeIn",
+                                effectTime: 1000,
+                                threshold: 0
+                            });
                         });
                     }
                 }
