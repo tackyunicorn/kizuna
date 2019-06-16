@@ -5,12 +5,13 @@
         <div class="file-field input-field">
             <div class="btn add-btn">
                 <i class="large material-icons">collections</i>
-                <input type="file" id="fileSelected" accept="image/*" required>
+                <input type="file" id="fileSelected" data-maxwidth="800" data-maxheight="800" accept="image/*" required>
             </div>
             <div class="file-path-wrapper">
                 <input class="file-path validate" type="text">
             </div>
         </div>
+        <div id="preview"></div>
         <div class="input-field">
             <input placeholder="e.g. my awesome pic!" id="caption" type="text" required>
             <label for="caption">caption</label>
@@ -21,8 +22,23 @@
                 <span>Private</span>
             </label>
         </p>
+        <div id="uploadProgress" class="#">
+            <div class="indeterminate"></div>
+        </div>
+        <div id="uploadingMessage"></div>
         <button class="btn right" type="submit">post
             <i class="material-icons right">send</i>
         </button>
     </form>
+</div>
+
+<div id="modal" class="modal">
+    <div class="modal-body">
+        <div class="img-container">
+            <img id="image" src="#" alt="Picture">
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn modal-close" id="crop">Crop</button>
+    </div>
 </div>
