@@ -46,6 +46,10 @@ i {
     cursor: pointer;
 }
 
+a {
+    cursor: pointer;
+}
+
 nav {
     background: var(--primary);
 }
@@ -159,4 +163,81 @@ form .input-field {
 
 .instagram {
     background: #3F729B;
+}
+
+/* modal styles */
+.modal {
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.img-container {
+    height: 400px;
+}
+
+.modal-footer button {
+    background: var(--primary);
+    width: 100%;
+}
+
+/* toast styles */
+#toast-container {
+    top: auto !important;
+    right: auto !important;
+    min-width: 10% !important;
+    bottom: 5%;
+    left: 5%;
+}
+
+/* profile styles */
+#profileHeading h3 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#profileHeading p {
+    margin-top: 25px;
+    font-size: 16px;
+}
+
+#profile {
+    margin-top: 25px;
+}
+
+.cards-container {
+    break-inside: avoid;
+}
+
+#gallery img.lazy {
+    width: 800px;
+    display: block;
+    padding: 5%;
+}
+
+.row .col.s4 {
+    padding: 0;
+}
+
+/* post styles */
+#postContainer .container {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#postContainer .container .row {
+    margin: 0 auto;
+}
+
+#newComment {
+    margin-left: 30px;
+    width: 90%;
+}
+
+.card-title a {
+    text-decoration: inherit;
+    color: inherit;
 }
