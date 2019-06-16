@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
         onOpenStart: search()
     });
     // new post
-    const post = document.querySelectorAll('.new-post');
-    M.Sidenav.init(post, {
+    const newPost = document.querySelectorAll('.new-post');
+    M.Sidenav.init(newPost, {
         edge: 'left',
-        draggable: false
+        draggable: false,
+        onOpenStart: upload()
     });
 }, {
     passive: true
