@@ -92,10 +92,10 @@ function upload() {
             event.preventDefault();
             $("#uploadProgress").attr('class', 'progress');
             $("#uploadingMessage").text("uploading...");
-            
+
             var caption = $("#post :input[id='caption']").val();
             var private = $("#post :input[id='private']:checked").val();
-            
+
             if (typeof private == 'undefined') {
                 private = false;
             } else {
@@ -123,16 +123,21 @@ function upload() {
                     document.getElementById("post").reset();
                     $("#preview").empty();
                     setTimeout(function () {
-                        location.reload();
+                        window.location.replace("/profile/");
                     }, 500);
                 },
                 error: function () {
+                    $("#uploadProgress").attr('class', '#');
+                    $("#uploadingMessage").empty();
                     M.toast({
                         html: 'failed to upload :(',
                         classes: 'rounded'
                     });
                     document.getElementById("post").reset();
                     $("#preview").empty();
+                    setTimeout(function () {
+                        window.location.replace("/profile/");
+                    }, 500);
                 },
             });
         });
