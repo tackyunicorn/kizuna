@@ -18,7 +18,7 @@ router.get('/', authCheck, async (req, res) => {
             userid: req.user.id
         }).sort({
             timestamp: -1
-        }).limit(10)
+        }).limit(60)
         res.render('profile', {
             user: req.user,
             self: true,

@@ -26,7 +26,7 @@ router.post('/', authCheck, async (req, res) => {
             score: {
                 $meta: 'textScore'
             }
-        }).limit(6)
+        }).limit(10)
         const results = dbResponse.filter((user) => user.id !== req.user.id)
         res.send({ results })
     } catch (e) {
