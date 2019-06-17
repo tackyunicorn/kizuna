@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
         draggable: false,
         onOpenStart: upload()
     });
+    const materialBoxed = document.querySelectorAll('.materialboxed');
+    M.Materialbox.init(materialBoxed);
 }, {
     passive: true
 });
