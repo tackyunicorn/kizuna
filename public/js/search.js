@@ -26,7 +26,7 @@ function search() {
                             $("#results").append(
                                 "<div class=\"container row valign-wrapper\">" +
                                 "<div class=\"col s3\">" +
-                                "<img data-src=\"" + item.thumbnail + "\" alt=\"thumbnail\" class=\"circle responsive-img lazy\">" +
+                                "<img style=\"width: 200px;display: block;background-image: url(\'/img/loading.gif\');background-repeat: no-repeat;background-position: 50% 50%;background-size: 50%;\" data-src=\"" + item.thumbnail + "\" alt=\"thumbnail\" class=\"circle lazy\">" +
                                 "</div>" +
                                 "<div class=\"col s9\">" +
                                 "<a class=\"grey-text\" href=\"/user/" + item._id + "\">" + item.username + "</a>" +
