@@ -1,6 +1,11 @@
 function search() {
     var element = document.getElementById('search');
     if (element) {
+        $("#clearSearch").click(
+            function () {
+                $("#search :input[id='searchTerm']").val('');
+            }
+        );
         element.addEventListener('submit', function (event) {
             event.preventDefault();
             $("#progress").attr('class', 'progress');
