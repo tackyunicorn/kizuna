@@ -212,6 +212,10 @@ form .input-field {
     width: 800px;
     display: block;
     padding: 5%;
+    background-image: url('/img/loading.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20%;
 }
 
 .row .col.s4 {
@@ -240,4 +244,13 @@ form .input-field {
 .card-title a {
     text-decoration: inherit;
     color: inherit;
+}
+
+#postContainer img {
+    width: 800px;
+    display: block;
+    background-image: url('/img/loading.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20%;
 }
