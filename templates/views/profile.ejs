@@ -20,7 +20,7 @@
         <%  } else { %>
             <div class="row">
                 <h3><b><%= foundUser.username %></b></h3>
-                <img data-src="<%= foundUser.thumbnail %>" alt="thumbnail" class="lazy circle profile">
+                <img data-src="<%= foundUser.thumbnail %>" class="lazy circle profile">
             </div>
             <div id="follow" class="col s6 offset-s3 l8 offset-l2 btn add-btn"></div>
             <% if (posts.length == 0) { %>
