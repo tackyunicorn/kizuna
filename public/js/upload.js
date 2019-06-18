@@ -78,6 +78,12 @@ function upload() {
                         cropper.setCropBoxData(cropBoxData).setCanvasData(canvasData);
                     }
                 });
+                $("#rotateLeft").on('click', function () {
+                    cropper.rotate(-45);
+                });
+                $("#rotateRight").on('click', function () {
+                    cropper.rotate(45);
+                });
             },
             onCloseEnd: function () {
                 croppedCanvas = cropper.getCroppedCanvas().toDataURL();
