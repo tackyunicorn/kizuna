@@ -5,32 +5,6 @@
     --complementary: #DD1C1A;
 }
 
-/* logo rotate animation */
-.loading {
-    -webkit-animation: spin 4s linear infinite;
-    -moz-animation: spin 4s linear infinite;
-    animation: spin 4s linear infinite;
-}
-
-@-moz-keyframes spin {
-    100% {
-        -moz-transform: rotate(360deg);
-    }
-}
-
-@-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
-}
-
-@keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
-}
-
 /* layout styles */
 html,
 body,
@@ -177,7 +151,7 @@ form .input-field {
 
 .modal-footer button {
     background: var(--primary);
-    width: 100%;
+    width: 80%;
 }
 
 /* toast styles */
@@ -198,6 +172,16 @@ form .input-field {
 #profileHeading p {
     margin-top: 25px;
     font-size: 16px;
+}
+
+#profileHeading img.lazy.profile {
+    width: 8rem;
+    display: block;
+    margin: 0 auto;
+    background-image: url('/img/loading.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20%;
 }
 
 #profile {
@@ -253,4 +237,37 @@ form .input-field {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 20%;
+}
+
+/* feed styles */
+#feed img.lazy {
+    width: 800px;
+    display: block;
+    background-image: url('/img/loading.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20%;
+}
+
+#feed img.lazy.profile {
+    width: 50px;
+    display: block;
+    background-image: url('/img/loading.gif');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 20%;
+}
+
+#feed h6 {
+    padding: 0;
+    text-align: center;
+}
+
+#feed .divider {
+    margin: 20px;
+}
+
+#feed a {
+    text-decoration: inherit;
+    color: inherit;
 }
