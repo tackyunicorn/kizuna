@@ -8,10 +8,40 @@
     <% include ../partials/menu %>
     <% include ../partials/new-post %>
 
-    <div class="container">
-        <h5>
-            <b><%= user.username %>'s feed</b>
-        </h5>
+    <div id="profileHeading" class="container">
+        <h3><b>My Feed</b></h3>
+        <% if (feed.length == 0) { %>
+            <p class="grey-text center">follow your friends to view your feed!</p>
+        <%  } %>
+
+        <div id="feed">
+        <% feed.forEach(function(followedUser) { %>
+            <div class="row valign-wrapper">
+                <div class="col">
+                    <img data-src="<%= followedUser.userinfo.thumbnail %>" alt="thumbnail" class="lazy circle profile">
+                </div>
+                <div class="col">
+                    <h6><b>
+                        Posts by <a href="/user/<%= followedUser.userinfo._id %>"><%= followedUser.userinfo.username %></a>
+                    </b></h6>
+                </div>
+            </div>
+            
+            <% if (typeof followedUser.posts[0]._id == 'undefined') { %>
+                <h6 class="grey-text">this user has not uploaded any public posts :(</h6>
+                <div class="divider"></div>
+            <% } else { %>
+                <div class="row">
+                    <div class="cards-container col s12">
+                        <% followedUser.posts.forEach(function(post) { %>
+                            <%  include ../partials/post-gallery %>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="divider"></div>
+            <% } %>
+        <% }) %>
+        </div>
     </div>
 
     <% include ../partials/footer %>
