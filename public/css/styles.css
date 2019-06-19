@@ -145,6 +145,12 @@ form .input-field {
     overflow: hidden;
 }
 
+.likeModal {
+    height: auto !important;
+    width: 20rem !important;
+    overflow-y: auto;
+}
+
 .img-container {
     height: 400px;
 }
@@ -237,6 +243,19 @@ form .input-field {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 20%;
+}
+
+#postContainer .divider {
+    margin: 20px;
+}
+
+#postContainer .closer {
+    padding: 0;
+    margin: 0;
+}
+
+#comments {
+    margin-left: -25%;
 }
 
 /* feed styles */
