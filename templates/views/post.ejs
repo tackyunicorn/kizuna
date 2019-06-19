@@ -27,7 +27,7 @@
                             </a>
                             <% } else { %>
                             <a id="likeButton" class="btn-floating halfway-fab btn-large waves-effect">
-                                <i class="material-icons black">favorite</i>
+                                <i id="likeStatus" class="material-icons">favorite</i>
                             </a>
                             <% } %>
                         </div>
@@ -39,23 +39,32 @@
                                 <% } %>
                                 <span class="card-title">
                                     <a href="/user/<%= post.userid %>"><%= postUser.username %></a>
+                                    <% if (!post.private) { %>
+                                        <a id="likeCount" class="right"></a>
+                                    <%  } %>
                                 </span>
                                 <p><i><%= post.caption %></i></p>
                                 <%  if (!post.private) { %>
-                                <form id="addComment">
-                                    <div class="input-field">
-                                        <label class="label-icon" for="text">
-                                            <i class="material-icons">comment</i>
-                                        </label>
-                                        <input id="newComment" placeholder="add a comment!" type="text">
-                                    </div>
-                                </form>
+                                    <div class="divider"></div>
+                                    <form id="addComment">
+                                        <div class="input-field">
+                                            <label class="label-icon" for="text">
+                                                <i class="material-icons">comment</i>
+                                            </label>
+                                            <input id="newComment" placeholder="add a comment!" type="text" required>
+                                        </div>
+                                    </form>
+                                    <div id="comments"></div>
                                 <% } %>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+    <div id="likeModal" class="likeModal modal">
+        <div id="likeList" class="modal-body"></div>
+    </div>
 
     <% include ../partials/footer %>
 </body>
