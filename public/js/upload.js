@@ -47,12 +47,12 @@ function upload() {
                     var resized = canvas.toDataURL("image/jpeg", 0.7);
                     var resizedImage = document.getElementById("image");
                     resizedImage.src = resized;
-                    $(".modal").modal('open');
+                    $("#cropModal").modal('open');
                 }
             };
         }
 
-        var elems = document.querySelectorAll('.modal');
+        var elems = document.getElementById('cropModal');
         var cropper;
         var cropBoxData;
         var canvasData;
