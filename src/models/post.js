@@ -9,7 +9,7 @@ const postSchema = new Schema({
     timestamp: {
         type: Date,
         default: Date.now
-    },
+    }
 })
 
 const Post = mongoose.model('post', postSchema)
