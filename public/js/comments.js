@@ -36,6 +36,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         newComment = $("#addComment :input[id='newComment']").val();
+        $("#addComment").trigger("reset");
 
         $.ajax({
             url: window.location.pathname + '/add-comment',
@@ -68,7 +69,6 @@ $(document).ready(function () {
                         "</div>" +
                     "</div>"
                 );
-                $("#addComment").trigger("reset");
                 $("img.lazy").lazy({
                     effect: "fadeIn",
                     effectTime: 1000,
