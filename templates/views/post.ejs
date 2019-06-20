@@ -16,6 +16,11 @@
                     <%  } else { %>
                     <div class="card hoverable">
                         <%  } %>
+                        <% if (postUser.id == user.id) { %>
+                        <a id="deletePost" class="btn-floating halfway-fab btn-large waves-effect">
+                            <i class="material-icons red">delete</i>
+                        </a>
+                        <% } %>
                         <div class="card-image">
                             <img class="materialboxed lazy" data-src="<%= post.location %>">
                             <a class="btn-floating halfway-fab btn-large left">
