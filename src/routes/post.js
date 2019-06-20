@@ -209,4 +209,24 @@ router.get('/:id/like-list', authCheck, async (req, res) => {
     }
 })
 
+router.get('/:id/delete', authCheck, async (req, res) => {
+    try {
+        const post = await Post.deleteOne({
+            _id: req.params.id
+        })
+        const likes = await Like.deleteMany({
+            likes: req.params.id
+        })
+        const comments = await Comment.deleteMany({
+            postid: req.params.id
+        })
+        var message = "deleted post :("
+        res.send({
+            message
+        })
+    } catch (e) {
+        console.error(e)
+    }
+})
+
 module.exports = router
