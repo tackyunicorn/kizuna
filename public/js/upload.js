@@ -102,6 +102,9 @@ function upload() {
             var caption = $("#post :input[id='caption']").val();
             var private = $("#post :input[id='private']:checked").val();
 
+            $("#preview").empty();
+            document.getElementById("post").reset();
+
             if (typeof private == 'undefined') {
                 private = false;
             } else {
@@ -126,8 +129,6 @@ function upload() {
                         html: 'post created!',
                         classes: 'rounded'
                     });
-                    document.getElementById("post").reset();
-                    $("#preview").empty();
                     setTimeout(function () {
                         window.location.replace("/profile/");
                     }, 500);
@@ -139,8 +140,6 @@ function upload() {
                         html: 'failed to upload :(',
                         classes: 'rounded'
                     });
-                    document.getElementById("post").reset();
-                    $("#preview").empty();
                     setTimeout(function () {
                         window.location.replace("/profile/");
                     }, 500);
