@@ -1,13 +1,24 @@
 <ul id="menu" class="sidenav menu">
     <div class="row valign-wrapper">
         <div class="col s3">
-            <img src="<%= user.thumbnail %>" class="circle responsive-img">
+            <a href="/profile/">
+                <img src="<%= user.thumbnail %>" class="circle responsive-img">
+            </a>
         </div>
-        <div class="col s7">
-            <a class="add-btn btn-small" href="/profile/">my profile</a>
+        <div class="col s3">
+            <a class="btn menu-btn" href="/profile/">
+                <i class="medium material-icons">person</i>
+            </a>
         </div>
-        <div class="col s2">
-            <a class="btn right btn-small" href="/auth/logout">Logout</a>
+        <div class="col s3">
+            <a class="btn menu-btn" href="/profile/feed/">
+                <i class="medium material-icons">dashboard</i>
+            </a>
+        </div>
+        <div class="col s3">
+            <a class="btn logout" href="/auth/logout">
+                <i class="medium material-icons">exit_to_app</i>
+            </a>
         </div>
     </div>
     <li>
@@ -17,7 +28,11 @@
         <form id="search">
             <div class="input-field">
                 <input id="searchTerm" placeholder="search for a friend" type="search" required>
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                <label class="label-icon" for="search">
+                    <button type="submit">
+                        <i class="material-icons">search</i>
+                    </button>
+                </label>
                 <i id="clearSearch" class="btn-flat material-icons">close</i>
             </div>
         </form>
