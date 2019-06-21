@@ -21,6 +21,15 @@ The app follows a minimal design philosophy, by maintaining the color scheme and
 
 In terms of user experience, small enhancements like toast messages and lazy loading of images is also included.
 
+## Table of Contents
+* [Project Structure](#project-structure)  
+* [Local Development](#local-development)  
+    * [Credential Setup](#credential-setup)
+    * [Running the local server](#running-the-local-server)
+* [Production Setup](#production-setup)
+* [Progressive Web App Integration](#progressive-web-app-integration)
+* [License](#license)
+
 ## Project Structure
 The project structure is as shown below:
 ```bash
@@ -34,17 +43,22 @@ The project structure is as shown below:
 │   │   ├── apple-touch-icon.png
 │   │   ├── favicon-16x16.png
 │   │   ├── favicon-32x32.png
-│   │   └── loading.gif
+│   │   ├── loading.gif
+│   │   └── sad-pug.png
 │   ├── js
 │   │   ├── comments.js
 │   │   ├── delete-post.js
 │   │   ├── follow-unfollow.js
 │   │   ├── lazy-load.js
 │   │   ├── likes.js
+│   │   ├── registerServiceWorker.js
 │   │   ├── search.js
 │   │   ├── ui.js
 │   │   └── upload.js
-│   └── manifest.json
+│   ├── pages
+│   │   └── fallback.html
+│   ├── manifest.json
+│   └── serviceWorker.js
 ├── samples
 │   └── kizuna.png
 ├── src
@@ -125,6 +139,9 @@ The dev script uses [nodemon](https://www.npmjs.com/package/nodemon) to monitor 
 The setup for production environments depends greatly on the cloud provider used. This project is hosted using [heroku hobby dynos](https://devcenter.heroku.com/articles/dyno-types) on a custom root-level domain name - [kizuna.ml](https://kizuna.ml), served by [cloudflare nameservers](https://support.cloudflare.com/hc/en-us/articles/205195708-Changing-your-domain-nameservers-to-Cloudflare). Since the primary purpose of the app is to interact with images, all forms of image upload and hosting is done via Amazon AWS [S3 Buckets.](https://aws.amazon.com/s3/) An M0 Sandbox [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cluster instance is used as the cloud database solution.
 
 Most cloud providers provide the functionality for specifying the environment variables. Do lookup the documentation for your cloud provider for the detailed process.
+
+## Progressive Web App Integration
+kizuna can be installed on supported devices as a progressive web app. This is done using a service worker that caches all the static assets and intercepts the requests to these assets. Offline support is also provided by means of a default fallback page. This feature has been tested on Android devices. Functionality on iOS browsers like Safari still remain murky due to the breaking OAuth flow. This behavior has been fixed in the [iOS 12.2 release](https://medium.com/@firt/whats-new-on-ios-12-2-for-progressive-web-apps-75c348f8e945).
 
 ## License
 kizuna is licensed under the [MIT](LICENSE) license.
