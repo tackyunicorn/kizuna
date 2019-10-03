@@ -6,7 +6,7 @@
 </p>
 
 ## Introduction
-Welcome to kizuna, the photo sharing web app! This is my first venture into production level web app development, so please do spare me for any inconsistencies :sweat_smile:. The name kizuna was chosen as it means *bond* in Japanese. In-fact, it was kanji of the year 2011! :tada:
+Welcome to kizuna, the photo sharing web app! This is my first venture into production level web app development, so please do spare me for any inconsistencies :sweat_smile:. The name kizuna was chosen as it means *bond* in Japanese. In-fact, it was the kanji of the year 2011! :tada:
 
 This is a simple web app. It allows users to sign-up via Google, Facebook or Twitter. Instagram support is also available, but has been temporarily disabled due to the lengthy app review requirements of Instagram.
 
