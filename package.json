@@ -32,6 +32,6 @@
     "passport-google-oauth20": "^2.0.0",
     "passport-instagram": "^1.0.0",
     "passport-twitter": "^1.0.4",
-    "uuid": "^3.3.2"
+    "uuid": "^8.2.0"
   }
 }
